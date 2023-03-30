@@ -19,8 +19,11 @@ public class WhenWorkingWithSets {
     public void creatingANewSet() {
         Set<String> colors = null;
 
-        // TODO: Create a new HashSet and add the values "red", "green", and "blue"
-
+        // DONE: Create a new HashSet and add the values "red", "green", and "blue"
+        colors = new HashSet<>();
+        colors.add("red");
+        colors.add("green");
+        colors.add("blue");
         assertThat(colors).containsExactlyInAnyOrder("red", "green", "blue");
     }
 
@@ -29,9 +32,9 @@ public class WhenWorkingWithSets {
     public void creatingASetOfValues() {
         Set<String> colors = null;
 
-        // TODO: Create a set of Strings containing the values "red", "green" and "blue"
+        // DONE: Create a set of Strings containing the values "red", "green" and "blue"
         //  using the Set.of() method
-
+        colors = Set.of("red", "green", "blue");
         assertThat(colors).containsExactlyInAnyOrder("red", "green", "blue");
     }
 
@@ -40,12 +43,12 @@ public class WhenWorkingWithSets {
     public void addAValueTwice() {
         Set<String>colors = new HashSet<>(Set.of("red", "green", "blue"));
 
-        // TODO: Read the following code, and assign the correct value to expectedSize to make the test pass
+        // DONE: Read the following code, and assign the correct value to expectedSize to make the test pass
         colors.add("red");
         colors.add("yellow");
         colors.add("red");
 
-        int expectedSize = 0;
+        int expectedSize = 4;
 
         assertThat(colors.size()).isEqualTo(expectedSize);
     }
@@ -55,15 +58,15 @@ public class WhenWorkingWithSets {
     public void canCheckIfEmpty() {
         Set<String> colors = new HashSet<>();
 
-        // TODO: Change this code so that it correctly determines whether the set is empty
-        Boolean startedEmpty = null;
+        // DONE: Change this code so that it correctly determines whether the set is empty
+        Boolean startedEmpty = true;
 
         colors.add("red");
         colors.add("green");
         colors.add("blue");
 
-        // TODO: Change this code so that it correctly determines whether the set now empty or not
-        Boolean endedUpEmpty = null;
+        // DONE: Change this code so that it correctly determines whether the set now empty or not
+        Boolean endedUpEmpty = false;
 
         assertThat(startedEmpty).isTrue();
         assertThat(endedUpEmpty).isFalse();
